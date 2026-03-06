@@ -31,9 +31,27 @@ h1,
 .h1 {
   font-family: "DM Sans", sans-serif;
   @apply text-[8rem] leading-[0.9] -tracking-[0.04em] text-black;
-  font-size: clamp(3rem, 8.466vw, 8rem);
+  font-size: clamp(3rem, 8vw, 8rem);
   /* line-height: clamp(3rem, 8.466vw, 8rem); */
   letter-spacing: clamp(-0.04em, -0.063vw, -0.04em);
+}
+
+h2,
+.h2 {
+  font-family: "DM Sans", sans-serif;
+  @apply text-[5rem] leading-22 -tracking-[0.04em] text-black;
+  font-size: clamp(2.5rem, 5.291vw, 5rem);
+  line-height: clamp(2.75rem, 5.82vw, 5.5rem);
+  letter-spacing: clamp(-0.04em, -0.063vw, -0.04em);
+}
+
+h3,
+.h3 {
+  @apply text-[4.5rem] leading-20 -tracking-[0.04em];
+}
+
+.title {
+  @apply text-sm leading-[normal] text-muted uppercase;
 }
 
 .ag__container {
