@@ -1,8 +1,8 @@
-"use client";
+'use client';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import Image from "next/image";
-import { NavLinks } from "@/components/Navbar";
+import Image from 'next/image';
+import { NavLinks } from '@/components/Navbar';
 import Link from 'next/link';
 
 export default function Header() {
@@ -27,26 +27,24 @@ export default function Header() {
   }, []);
   return (
     <>
-      <header className="site-header fixed z-99 w-full transition-all duration-300 ease-in-out py-8 border-b border-grey-light">
-        <div className='ag__container flex items-center justify-between'>
+      <header className="site-header border-grey-light fixed z-99 w-full border-b py-8 transition-all duration-300 ease-in-out">
+        <div className="ag__container flex items-center justify-between">
           <Link href="/">
             <Image
               src="/images/logo.svg"
-              className="z-30 relative"
+              className="relative z-30"
               alt="Velocity"
               width={201}
               height={31}
               priority={true}
             />
           </Link>
-          <div className="menu-toggle uppercase flex items-center gap-2 text-sm lending-[normal]">
+          <div className="menu-toggle lending-[normal] flex items-center gap-2 text-sm uppercase">
             <span>Menu</span>
             <div
               aria-label="Courtavenue"
-              onClick={() => setIsOpen(prev => !prev)}
-              className={`nav__humburger flex items-center justify-center min-w-10 h-10 relative cursor-pointer z-30
-                ${isOpen ? 'open' : ''}
-              `}
+              onClick={() => setIsOpen((prev) => !prev)}
+              className={`nav__humburger relative z-30 flex h-10 min-w-10 cursor-pointer items-center justify-center ${isOpen ? 'open' : ''} `}
             >
               <span />
             </div>

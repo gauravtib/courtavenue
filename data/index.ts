@@ -1,6 +1,4 @@
-import {
-  MenuItem,
-} from './dataType';
+import { MenuItem } from './dataType';
 
 export const menu: MenuItem[] = [
   {
@@ -69,6 +67,6 @@ export const legalPage: MenuItem[] = [
   },
   {
     title: 'Privacy Policy ',
-   url: '#',
+    url: '#',
   },
 ];
