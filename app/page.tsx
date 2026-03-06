@@ -1,65 +1,58 @@
+import { Button } from '@/components/Button';
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between bg-white px-16 py-32 sm:items-start dark:bg-black">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl leading-10 font-semibold tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{' '}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{' '}
-            or the{' '}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{' '}
-            center.
-          </p>
+    <section className="home-banner-section pt-40 pb-6 min-h-screen">
+      <div className='ag__container flex flex-col justify-between'>
+        <div className="banner-top w-full relative">
+          <div className="title-block uppercase text-right flex flex-col items-end gap-2">
+            <h1>Your strategic partner <br />in the intelligence <br />Economy</h1>
+            <span className='text-muted font-sm leading-[normal] py-2 px-4 rounded-[3.75rem] bg-[#F3F2F2]/50 uppercase'>AI • Commerce • CX • Platforms • Media</span>
+          </div>
+          <div className="banner-content max-w-75 flex flex-col gap-8 items-start absolute bottom-0 z-2">
+            <p>We fuse artificial intelligence, digital innovation, commerce, and creative tech to accelerate measurable growth.</p>
+            <Button text="Get in Touch" href="#" />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="bg-foreground text-background flex h-12 w-full items-center justify-center gap-2 rounded-full px-5 transition-colors hover:bg-[#383838] md:w-[158px] dark:hover:bg-[#ccc]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] md:w-[158px] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="banner-bottom w-full flex items-end justify-between gap-6">
+          <div className="w-2/7">
+            <div className="page-video-block pointer-none max-w-67 rounded-lg overflow-hidden relative">
+              <video
+                className="pointer-none w-full object-cover"
+                src="/video/kia.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+              <Image
+                src="/images/doted.gif"
+                className="absolute top-0 left-0 w-full h-full opacity-10 mix-blend-hard-light"
+                alt="Counteravenue"
+                width={268}
+                height={150}
+                priority={true}
+              />
+            </div>
+          </div>
+          <div className="w-3/7">
+            <div className="page-video-block pointer-none max-w-160 mx-auto mix-blend-darken">
+              <video
+                className="pointer-none h-[37.5vh] mx-auto object-cover"
+                src="/video/logo-video.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            </div>
+          </div>
+          <div className="w-2/7 text-right">
+            <span className='text-xs leading-[normal] uppercase pb-4 block'>Scroll Down</span>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
   );
 }
